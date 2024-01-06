@@ -41,4 +41,4 @@
 - 5. Execute the command "python train_data_generator.py" to extract behavior graph of process entities. It will generate *.pt file in "./save/data/train/" and "./save/data/test/" path respectively.
 - 6. Execute the command "python training.py -h", you can change the parameters as your wish, or just execute the command "python training.py" with default setting. Training results output in "./save/trace", "./utils/plot_.py" can be used for diagram ploting.
 
-We provide generated "provenance_graph" and "behavior_graph" dataset to recurrent our experiment. If you use them, you can skip the step 1 to 5. Download: https://drive.google.com/drive/folders/18PZz2wcsCKJN17gLiDLRJMltQ04bLi43?usp=drive_link
+We provide generated "provenance_graph" and "behavior_graph" dataset to reproduce our experiment. If you use them, you can skip the step 1 to 5. Download: https://drive.google.com/drive/folders/18PZz2wcsCKJN17gLiDLRJMltQ04bLi43?usp=drive_link
