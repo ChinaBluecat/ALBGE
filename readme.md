@@ -41,3 +41,5 @@
 4. 手工将作为训练集与测试集的日志分别放入 ./save/gml/train & ./save/gml/test.
 5. 执行 "python train_data_generator.py", 将提取行为图并存至 ./save/data/train & ./save/data/test 路径
 6. 执行 "python training.py -h" 可查看训练脚本帮助, 或直接执行 "python training.py" 使用默认参数进行训练。结果保存到 ./save/trace 路径下, 可以使用 ./utils/plot_.py 绘制图表
+
+我们提供预处理后生成的 provenance_graph 与 behavior_graph 文件, 可直接用于复现实验。下载地址: https://drive.google.com/drive/folders/18PZz2wcsCKJN17gLiDLRJMltQ04bLi43?usp=drive_link
