@@ -73,8 +73,8 @@ def plot_roc(title_name, test_metrics):
 def plot_all_roc(path):
     import random
     linestyle_dic = ['-', ':', '--', '-.']
-    fig, ax = plt.subplots()
-    ax.set_title('ROC Curve(process entitity)')
+    fig, ax = plt.subplots(figsize=(5, 4))
+    ax.set_title('ROC Curve(Few-Shot learning)')
     ax.set_xlabel('False Positive Rate')
     ax.set_ylabel('True Positive Rate')
     metrics_dir = os.listdir(path)
@@ -85,7 +85,7 @@ def plot_all_roc(path):
         #input(dic.item()['test_metrics']['AUROC'])
         fpr = roc[0]#[x for x in roc[0]]
         tpr = roc[1]#[x for x in roc[1]]
-        ax.plot(fpr, tpr, label='{}'.format(filename.split('_metrics')[0]), linestyle=random.choice(linestyle_dic), alpha=0.5,)# drawstyle='steps')
+        ax.plot(fpr, tpr, label='{}'.format(filename.split('_metrics')[0]), linestyle=random.choice(linestyle_dic), alpha=0.5, linewidth=3,) #drawstyle='steps')
         ax.legend()
     plt.show()
 
@@ -141,4 +141,3 @@ if __name__ == '__main__':
 
     plot_all_roc('../save/trace')
     echo_precision_recall_f1('../save/trace')
-

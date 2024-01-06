@@ -169,5 +169,8 @@ if __name__ == '__main__':
         model.load(loadname)
         test_metrics.append(eval(test_dataset, 'test'))
         print('[*] Eval result:')
-        print(test_metrics)
-
+        #print(test_metrics)
+        print('[-] {:<3} | {:<3} | {:<3} | {:<3} |'.format('tp', 'tn', 'fp', 'fn'))
+        print('[-] {:<3} | {:<3} | {:<3} | {:<3} |'.format(*test_metrics[0][0]))
+        print('[-] {:<3} | {:<3} | {:<3} | {:<3} | {:<3} |'.format('auc', 'acc', 'rec', 'pre', 'f1'))
+        print('[-] {:<3} | {:<3} | {:<3} | {:<3} | {:<3} |'.format(*test_metrics[0][1:6]))
